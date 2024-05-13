@@ -1,3 +1,4 @@
+/*---------Reset Css--------------------------------*/
 /* Box sizing rules */
 *,
 *::before,
@@ -90,28 +91,26 @@ textarea:not([rows]) {
 }
 
 :root {
-  /* font-sizes */
-  --fs-900: 5rem;
-  --fs-800: 3.5rem;
-  --fs-700: 1.5rem;
-  --fs-600: 1rem;
+  /*-------fontsize-----*/
+  --fs-900: 3rem;
+  --fs-800: 2.62rem;
+  --fs-700: 2rem;
+  --fs-600: 1.5rem;
   --fs-500: 1rem;
   --fs-400: 0.9375rem;
   --fs-300: 1rem;
   --fs-200: 0.875rem;
-
-  /* font-families */
+  /*------------------*/
+  /*-------------fontfamily----------------------*/
+  --ff-inter: "Inter", sans-serif;
   --ff-serif: "Bellefair", serif;
   --ff-sans-cond: "Barlow Condensed", sans-serif;
   --ff-sans-normal: "Barlow", sans-serif;
+  /*----------------------------------------------*/
 
-  /*Font weight*/
-
-  /*text color*/
-
-  /*backround color*/
-
-  --clr-white: #ffffff;
+  /*-------Color---------*/
+  --clr-black: #0a0a14;
+  --clr-white: #fff;
   --clr-gray: #f4f4f4;
   --clr-blue: #ddeefe;
   --clr-green: #d9f6f1;
@@ -120,11 +119,10 @@ textarea:not([rows]) {
   --clr-middlegray: #525252;
   --clr-darkblue: #2d3235;
   --clr-darkbluegreen: #495351;
-
-  /*------------------------------*/
+  /*--------------------------------*/
 }
 
-/*------------- Utillty Class ---------------*/
+/*------------Utility Classes-------------- */
 
 .flex {
   display: flex;
@@ -138,7 +136,7 @@ textarea:not([rows]) {
   flex-wrap: wrap;
 }
 
-/*backround color*/
+/*-------background-color---------*/
 
 .bg-white {
   background-color: var(--clr-white);
@@ -166,4 +164,26 @@ textarea:not([rows]) {
 }
 .bg-darkbluegreen {
   background-color: var(--clr-darkbluegreen);
+}
+
+/*---font-family*/
+.ff-inter {
+  font-family: var(--ff-inter);
+}
+
+/*-------background-color---------*/
+
+.tx-white {
+  color: var(--clr-white);
+}
+.tx-black {
+  color: var(--clr-black);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.mode {
+  justify-content: end;
 }

@@ -1,3 +1,5 @@
-export default function Projects() {
-  return <>Projects Burada</>;
-}
+const Projects = () => {
+  return <section>Projects</section>;
+};
+
+export default Projects;
