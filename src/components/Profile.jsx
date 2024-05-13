@@ -1,31 +1,38 @@
 const Profile = () => {
   return (
-    <section className="bg-gray">
+    <section className="bg-gray flex column">
       <h1>Profile</h1>
-      <div>
-        <article>
+      <div className="flex">
+        <article className="flex column">
           <h3>Basic Information</h3>{" "}
           <div>
-            <p></p>
-            <p></p>
+            <p>Doğum Tarihi</p>
+            <p>12.01.1996</p>
           </div>
           <div>
-            <p></p>
-            <p></p>
+            <p>İkimat Şehri</p>
+            <p>Bursa</p>
           </div>
           <div>
-            <p></p>
-            <p></p>
+            <p>Eğitim Durumu</p>
+            <p>EEM</p>
           </div>
           <div>
-            <p></p>
-            <p></p>
+            <p>Tercih Ettiği rol</p>
+            <p> Front end UI</p>
           </div>
         </article>
-        <article>
-          <h3></h3>
-          <p></p>
-          <p></p>
+        <article className="flex column">
+          <h3>About me </h3>
+          <p>
+            {" "}
+            Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
+            ipsumLorem ipsum{" "}
+          </p>
+          <p>
+            Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
+            ipsumLorem ipsumLorem ipsum
+          </p>
         </article>
       </div>
     </section>
