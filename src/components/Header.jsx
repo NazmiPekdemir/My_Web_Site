@@ -1,41 +1,54 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const Header = () => {
   return (
     <>
-      <header className="flex column bg-gray outline">
-        <div className="mode flex">
-          {" "}
-          <div> light-mode , language </div>
-        </div>
-
-        <div className="flex width">
-          <div>
-            <p>Lorem</p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptates rem nulla doloremque perspiciatis asperiores hic
-              maiores, sed eum facilis incidunt dignissimos qui quos voluptate
-              nisi iste quaerat, corporis cumque voluptas?
-            </p>
-            <div>
-              <FontAwesomeIcon icon={faEnvelope} />
-              <FontAwesomeIcon icon={faLinkedin} />
+      <header className="bg-gray flex js-center padding-top-3 padding-bottom-3">
+        <div className="flex column alg-center gap-3 padding-left-4 padding-right-4 padding-bottom-3 outline">
+          <div className="flex mode alg-center gap-1 padding-top-3 padding-bottom-3 uppercase ">
+            <div className="radio-btn">
+              <div className="radio-inner active"></div>
             </div>
-            <p></p>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet
-              quaerat laborum quos temporibus{" "}
-            </p>
+            <div>light-mode | language </div>
           </div>
 
-          <img
-            style={{ width: "30%" }}
-            src="https://s3-alpha-sig.figma.com/img/76b0/6993/b04fd1fa29a883e2f4b8b8577a5c82eb?Expires=1716768000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=L4N~ozvxBUVaPenDRBq45XCDlY5QNRF5mggdF5gE~yYGR5I-zKgPrVymBJZjzVdB9HbvK~-o0-Z1-hphzK-HLxoX4O0~51SoxymaQUv-FJYDu1h0gBHYJEQwXpFIEGahuhkZG08uJrSCjMw6xDAGSafzbFK-~67LRUl80~LhFECPF9RGMCYNjff5R7ygEJkGfD4acMnY139gzL4HIk4sf0tq16P2NF065TTaw-5ipf8XzvP5x-E335rNEbMDSUYjyVIP46Lz6qHaXCJRqrQs6X8zkWYfAcHahB1JHe1XG6vZD4N4khlQgWyic0uckNHvkePHeA8sbzP47irvLmcH0A__"
-            alt="profile-resmi"
-          />
+          <div className="flex wrap-reverse space-between alg-center ">
+            <div
+              style={{ flexBasis: "52%" }}
+              className=" flex column gap-3 outline "
+            >
+              <p className="fs-700 fw-400">Hi! 👋</p>
+              <p className="fs-800 fw-500 lh-4">
+                I’m Almila. I’m a full-stack developer. I can craft solid and
+                scalable frontend products. Let’s meet!
+              </p>
+              <div className="flex gap-2 padding-top-1">
+                <FontAwesomeIcon className="fa-3x" icon={faLinkedin} />
+                <FontAwesomeIcon className="fa-3x" icon={faGithub} />
+                <i></i>
+              </div>
+              <div className="fs-500 fw-400 lh-2">
+                <p>
+                  Currently <span className="tx-red">Freelancing</span>{" "}
+                  <span className="tx-red">for UX, UI, & Web Design</span>{" "}
+                  Project .
+                </p>
+                <p>
+                  Invite me to join your team -{" "}
+                  <a href="pratamaiosi@gmail.com" className="tx-red">
+                    pratamaiosi@gmail.com
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div
+              className="padding-top-1 padding-bottom-1 "
+              style={{ flexBasis: "40%" }}
+            >
+              <div className="profileimg"></div>
+            </div>
+          </div>
         </div>
       </header>
     </>

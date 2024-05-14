@@ -196,8 +196,13 @@ video {
   --ff-sans-cond: "Barlow Condensed", sans-serif;
   --ff-sans-normal: "Barlow", sans-serif;
   /*----------------------------------------------*/
-
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-800: 800;
   /*-------Color---------*/
+  --clr-red: #af0c48;
   --clr-black: #0a0a14;
   --clr-white: #fff;
   --clr-gray: #f4f4f4;
@@ -221,20 +226,91 @@ video {
   flex-direction: column;
 }
 
+.space-between {
+  justify-content: space-between;
+}
+
 .wrap {
   flex-wrap: wrap;
 }
-
-.js-end {
-  justify-content: end;
+.wrap-reverse {
+  flex-wrap: wrap-reverse;
 }
 
 .js-center {
   justify-content: center;
 }
 
-/*-------background-color---------*/
+.alg-center {
+  align-items: center;
+}
 
+.tx-center {
+  text-align: center;
+}
+
+/*------gap----------------*/
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: 1.5rem;
+}
+
+.gap-3 {
+  gap: 2rem;
+}
+
+.padding-top-1 {
+  padding-top: 1rem;
+}
+.padding-top-2 {
+  padding-top: 1.5rem;
+}
+.padding-top-3 {
+  padding-top: 2rem;
+}
+
+.padding-bottom-1 {
+  padding-bottom: 1rem;
+}
+.padding-bottom-2 {
+  padding-bottom: 1.5rem;
+}
+.padding-bottom-3 {
+  padding-bottom: 2rem;
+}
+
+.padding-right-1 {
+  padding-right: 3rem;
+}
+.padding-right-2 {
+  padding-right: 4.5rem;
+}
+.padding-right-3 {
+  padding-right: 6rem;
+}
+
+.padding-right-4 {
+  padding-right: 9rem;
+}
+
+.padding-left-1 {
+  padding-left: 3rem;
+}
+.padding-left-2 {
+  padding-left: 4.5rem;
+}
+.padding-left-3 {
+  padding-left: 6rem;
+}
+.padding-left-4 {
+  padding-left: 9rem;
+}
+
+/*-------background-color---------*/
 .bg-white {
   background-color: var(--clr-white);
 }
@@ -262,13 +338,67 @@ video {
 .bg-darkbluegreen {
   background-color: var(--clr-darkbluegreen);
 }
-
+/*---font-size*/
+.fs-900 {
+  font-size: var(--fs-900);
+}
+.fs-800 {
+  font-size: var(--fs-800);
+}
+.fs-700 {
+  font-size: var(--fs-700);
+}
+.fs-600 {
+  font-size: var(--fs-600);
+}
+.fs-500 {
+  font-size: var(--fs-500);
+}
+.fs-400 {
+  font-size: var(--fs-400);
+}
+.fs-300 {
+  font-size: var(--fs-300);
+}
+.fs-200 {
+  font-size: var(--fs-200);
+}
+/*---font-weight--*/
+.fw-700 {
+  font-weight: var(--fw-700);
+}
+.fw-600 {
+  font-weight: var(--fw-600);
+}
+.fw-500 {
+  font-weight: var(--fw-500);
+}
+.fw-400 {
+  font-weight: var(--fw-400);
+}
 /*---font-family*/
 .ff-inter {
   font-family: var(--ff-inter);
 }
 
-/*-------background-color---------*/
+/*-------line-height---------*/
+
+.lh-1 {
+  line-height: 1rem;
+}
+
+.lh-2 {
+  line-height: 2rem;
+}
+
+.lh-3 {
+  line-height: 3rem;
+}
+.lh-4 {
+  line-height: 4rem;
+}
+
+/*-------text-color---------*/
 
 .tx-white {
   color: var(--clr-white);
@@ -276,26 +406,69 @@ video {
 .tx-black {
   color: var(--clr-black);
 }
+.tx-red {
+  color: var(--clr-red);
+}
 
 .uppercase {
   text-transform: uppercase;
 }
 
 .mode {
-  justify-content: end;
+  align-self: flex-end;
 }
 
 .outline {
-  margin: 1rem;
-  border: 1px solid black;
-  padding: 2rem;
-  height: 60vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  border: blue solid 2px;
 }
 
-.widht {
-  width: 50%;
+.profileimg {
+  background-image: url("https://s3-alpha-sig.figma.com/img/76b0/6993/b04fd1fa29a883e2f4b8b8577a5c82eb?Expires=1716768000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=L4N~ozvxBUVaPenDRBq45XCDlY5QNRF5mggdF5gE~yYGR5I-zKgPrVymBJZjzVdB9HbvK~-o0-Z1-hphzK-HLxoX4O0~51SoxymaQUv-FJYDu1h0gBHYJEQwXpFIEGahuhkZG08uJrSCjMw6xDAGSafzbFK-~67LRUl80~LhFECPF9RGMCYNjff5R7ygEJkGfD4acMnY139gzL4HIk4sf0tq16P2NF065TTaw-5ipf8XzvP5x-E335rNEbMDSUYjyVIP46Lz6qHaXCJRqrQs6X8zkWYfAcHahB1JHe1XG6vZD4N4khlQgWyic0uckNHvkePHeA8sbzP47irvLmcH0A__");
+  background-position: center;
+  background-size: cover;
+  aspect-ratio: 1/1;
+  min-width: 300px;
+  border-radius: 2rem;
+  box-shadow: -1rem -1rem #e92577;
+}
+
+.radio-btn {
+  width: 50px;
+  height: 30px;
+  padding: 5px;
+  background-color: #27173a;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.radio-inner {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: #ffc207;
+  border-radius: 50%;
+  transition: all 0.6s;
+}
+
+.radio-inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 100%;
+  height: 100%;
+  background-color: #27173a;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: all 0.6s;
+}
+
+.active {
+  transform: translateX(calc(50px - 30px));
+}
+
+.active::before {
+  left: -9px;
+  transform: scale(1);
 }
