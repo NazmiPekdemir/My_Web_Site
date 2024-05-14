@@ -33,12 +33,6 @@ ol[role="list"] {
   list-style: none;
 }
 
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  line-height: 1.5;
-}
-
 /* Set shorter line heights on headings and interactive elements */
 h1,
 h2,
@@ -192,6 +186,7 @@ video {
   /*------------------*/
   /*-------------fontfamily----------------------*/
   --ff-inter: "Inter", sans-serif;
+  --ff-play: "Playfair Display", serif;
   --ff-serif: "Bellefair", serif;
   --ff-sans-cond: "Barlow Condensed", sans-serif;
   --ff-sans-normal: "Barlow", sans-serif;
@@ -206,6 +201,7 @@ video {
   --clr-black: #0a0a14;
   --clr-white: #fff;
   --clr-gray: #f4f4f4;
+  --clr-lightgray: #777777;
   --clr-blue: #ddeefe;
   --clr-green: #d9f6f1;
   --clr-grayblue: #2a262b;
@@ -214,6 +210,17 @@ video {
   --clr-darkblue: #2d3235;
   --clr-darkbluegreen: #495351;
   /*--------------------------------*/
+}
+
+html {
+  font-size: 16px;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-size: 16px;
 }
 
 /*------------Utility Classes-------------- */
@@ -225,9 +232,39 @@ video {
 .column {
   flex-direction: column;
 }
+.flex-basis-30 {
+  flex-basis: 30%;
+}
+.flex-basis-40 {
+  flex-basis: 40%;
+}
 
-.space-between {
+.flex-basis-50 {
+  flex-basis: 50%;
+}
+
+.flex-basis-60 {
+  flex-basis: 60%;
+}
+
+.flex-basis-70 {
+  flex-basis: 70%;
+}
+
+.flex-basis-80 {
+  flex-basis: 80%;
+}
+
+.flex-basis-90 {
+  flex-basis: 90%;
+}
+
+.js-between {
   justify-content: space-between;
+}
+
+.js-around {
+  justify-content: space-around;
 }
 
 .wrap {
@@ -261,6 +298,10 @@ video {
 
 .gap-3 {
   gap: 2rem;
+}
+
+.gap-4 {
+  gap: 3rem;
 }
 
 .padding-top-1 {
@@ -381,6 +422,10 @@ video {
   font-family: var(--ff-inter);
 }
 
+.ff-play {
+  font-family: var(--ff-play);
+}
+
 /*-------line-height---------*/
 
 .lh-1 {
@@ -410,6 +455,10 @@ video {
   color: var(--clr-red);
 }
 
+.tx-gray {
+  color: var(--clr-lightgray);
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -422,12 +471,17 @@ video {
   border: blue solid 2px;
 }
 
+.profile-card {
+  border-radius: 1rem;
+  box-shadow: 5px 5px var(--clr-lightgray);
+}
+
 .profileimg {
   background-image: url("https://s3-alpha-sig.figma.com/img/76b0/6993/b04fd1fa29a883e2f4b8b8577a5c82eb?Expires=1716768000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=L4N~ozvxBUVaPenDRBq45XCDlY5QNRF5mggdF5gE~yYGR5I-zKgPrVymBJZjzVdB9HbvK~-o0-Z1-hphzK-HLxoX4O0~51SoxymaQUv-FJYDu1h0gBHYJEQwXpFIEGahuhkZG08uJrSCjMw6xDAGSafzbFK-~67LRUl80~LhFECPF9RGMCYNjff5R7ygEJkGfD4acMnY139gzL4HIk4sf0tq16P2NF065TTaw-5ipf8XzvP5x-E335rNEbMDSUYjyVIP46Lz6qHaXCJRqrQs6X8zkWYfAcHahB1JHe1XG6vZD4N4khlQgWyic0uckNHvkePHeA8sbzP47irvLmcH0A__");
   background-position: center;
   background-size: cover;
   aspect-ratio: 1/1;
-  min-width: 300px;
+  min-width: 18.75rem;
   border-radius: 2rem;
   box-shadow: -1rem -1rem #e92577;
 }
