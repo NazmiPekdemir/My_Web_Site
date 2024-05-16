@@ -18,26 +18,25 @@ describe("Theme Toggle", () => {
     // Assert: Tekrar blue mode'a döndüğünü doğrulayın
     cy.get("header").should("have.attr", "value", "");
   });
+});
+describe("Language Toggle", () => {
+  it("toggles the language", () => {
+    // Arrange: Başlangıç durumunu ayarlayın
+    cy.visit("http://localhost:5173/"); // Uygulamanızın doğru URL'sini kullanın
 
-  describe("Language Toggle", () => {
-    it("toggles the language", () => {
-      // Arrange: Başlangıç durumunu ayarlayın
-      cy.visit("http://localhost:5173/"); // Uygulamanızın doğru URL'sini kullanın
+    // Assert: Başlangıç dilinin doğru olduğunu doğrulayın
+    cy.get("header").contains("Merhaba!");
 
-      // Assert: Başlangıç dilinin doğru olduğunu doğrulayın
-      cy.get("header").contains("Merhaba!");
+    // Act: Dil değiştirme düğmesine tıklayın
+    cy.get('button[data-cy="language-toggle"]').click();
 
-      // Act: Dil değiştirme düğmesine tıklayın
-      cy.get('button[data-cy="language-toggle"]').click();
+    // Assert: Dil değişikliğini doğrulayın (başka bir dile geçtiğini)
+    cy.get("header").contains("Hi!");
 
-      // Assert: Dil değişikliğini doğrulayın (başka bir dile geçtiğini)
-      cy.get("header").contains("Hi!");
+    // Act: Tekrar tıklayarak başlangıç diline dönün
+    cy.get('button[data-cy="language-toggle"]').click();
 
-      // Act: Tekrar tıklayarak başlangıç diline dönün
-      cy.get('button[data-cy="language-toggle"]').click();
-
-      // Assert: Tekrar başlangıç diline döndüğünü doğrulayın
-      cy.get("header").contains("Merhaba!");
-    });
+    // Assert: Tekrar başlangıç diline döndüğünü doğrulayın
+    cy.get("header").contains("Merhaba!");
   });
 });
