@@ -8,6 +8,7 @@ import vs from "./assets/Skills/vsLogo.png";
 import laptop from "./assets/Projects/laptop.png";
 import right from "./assets/Projects/right.png";
 import left from "./assets/Projects/left.png";
+import axios from "axios";
 
 export const skillsData = {
   en: {
@@ -217,3 +218,28 @@ export const footerData = {
   en: ["Let’s work together on", "your next product.", "Personal Blog"],
   tr: ["Bir sonraki projende", "birlikte çalışalım.", "Kişisel Blog"],
 };
+
+/* axios
+  .post("https://6646320e51e227f23aae2ccd.mockapi.io/data/nazmi_data", profileData)
+  .then((res) => console.log(res.data))
+  .catch((err) => console.log(err));
+
+axios
+  .post("https://6646320e51e227f23aae2ccd.mockapi.io/data/nazmi_data", headerData)
+  .then((res) => console.log(res.data))
+  .catch((err) => console.log(err));
+
+axios
+  .post("https://6646320e51e227f23aae2ccd.mockapi.io/data/nazmi_data", skillsData)
+  .then((res) => console.log(res.data))
+  .catch((err) => console.log(err));
+
+axios
+  .post("https://6646320e51e227f23aae2ccd.mockapi.io/data/nazmi_data", projectsData)
+  .then((res) => console.log(res.data))
+  .catch((err) => console.log(err));
+
+axios
+  .post("https://6646320e51e227f23aae2ccd.mockapi.io/data/nazmi_data", footerData)
+  .then((res) => console.log(res.data))
+  .catch((err) => console.log(err)); */

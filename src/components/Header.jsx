@@ -2,19 +2,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { headerData } from "../data";
 import useLocalStorage from "../hooks/useLocalStorage";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Context } from "../context/context";
 
 const Header = () => {
   const [darkMode, setDarkMode] = useLocalStorage("Theme", false);
-  const { lang, toogle } = useContext(Context);
+  const { lang, toogle, npdata } = useContext(Context);
 
   const toggleTheme = () => {
     setDarkMode(!darkMode);
   };
   const toggleWithDiv = (e) => {
-    toggleTheme(); // Button işlevini çağır
-    e.stopPropagation(); // Div'in ana elementlere tıklama olayını iletmemesini sağla
+    toggleTheme();
+    e.stopPropagation();
   };
 
   return (
