@@ -4,12 +4,10 @@ import js from "./assets/Skills/jsLogo.png";
 import node from "./assets/Skills/nodeLogo.png";
 import react from "./assets/Skills/reactLogo.png";
 import vs from "./assets/Skills/vsLogo.png";
-
 import laptop from "./assets/Projects/laptop.png";
 import right from "./assets/Projects/right.png";
 import left from "./assets/Projects/left.png";
 import axios from "axios";
-
 export const skillsData = {
   en: {
     title: "Skills",
@@ -62,7 +60,6 @@ export const skillsData = {
     },
   ],
 };
-
 export const profileData = {
   en: {
     information: {
@@ -103,6 +100,29 @@ export const profileData = {
     titles: ["Profil", "Temel Bilgiler"],
   },
 };
+/*
+export const profileData = {
+  birthday: {
+    en: { name: "Birth Date", value: "24.03.1996" },
+    tr: { name: "Doğum Tarihi", value: "24.03.1996" },
+  },
+  city: {
+    en: { name: "City", value: "Ankara" },
+    tr: { name: "İkamet Şehri", value: "Ankara" },
+  },
+  education: {
+    en: { name: "Education", value: "Hacettepe Ünv. Biyoloji Lisans, 2016" },
+    tr: {
+      name: "Eğitim Durumu",
+      value: "Hacettepe Ünv. Biyoloji Lisans, 2016",
+    },
+  },
+  preferred: {
+    en: { name: "Preferred Role", value: "Frontend,UI" },
+    tr: { name: "Tercih Ettiği Rol", value: "Frontend,UI" },
+  },
+};
+*/
 export const projectsData = {
   en: {
     title: "Projects",
@@ -128,7 +148,6 @@ export const projectsData = {
         ],
       },
     ],
-    links: ["View on Github", "Go to app"],
   },
   tr: {
     title: "Projeler",
@@ -154,7 +173,6 @@ export const projectsData = {
         ],
       },
     ],
-    links: ["Github'ta görüntüle", "Uygulamaya git"],
   },
 };
 
@@ -173,7 +191,6 @@ export const headerData = {
     ],
     selections: { mode: ["dark mode", "light mode"], language: "türkçe" },
   },
-
   tr: {
     title: "Merhaba!",
     content: `Ben Almila. Ben tam kapsamlı bir geliştiriciyim. Sağlam işler yapabilirim ve
@@ -192,37 +209,28 @@ export const headerData = {
     },
   },
 };
-
 export const footerData = {
   en: ["Let’s work together on", "your next product.", "Personal Blog"],
   tr: ["Bir sonraki projende", "birlikte çalışalım.", "Kişisel Blog"],
 };
-/*
-const url = "https://6647084651e227f23ab0c91f.mockapi.io/api/TR";
 
-axios
-  .post(url, {
-    id: "1",
-    headerData: { ...headerData.tr },
-    projectsData: { ...projectsData.tr },
-    profileData: { ...profileData.tr },
-    skillsData: { ...skillsData.tr, skills: [...skillsData.skills] },
-    footerData: [...footerData.tr],
-  })
+/* axios
+  .post("https://6646320e51e227f23aae2ccd.mockapi.io/data/nazmi_data", profileData)
   .then((res) => console.log(res.data))
-  .catch((err) => console.error());
-
-const url2 = "https://6647084651e227f23ab0c91f.mockapi.io/api/EN";
-
+  .catch((err) => console.log(err));
 axios
-  .post(url2, {
-    id: "1",
-    headerData: { ...headerData.en },
-    projectsData: { ...projectsData.en },
-    profileData: { ...profileData.en },
-    skillsData: { ...skillsData.en, skills: [...skillsData.skills] },
-    footerData: [...footerData.en],
-  })
+  .post("https://6646320e51e227f23aae2ccd.mockapi.io/data/nazmi_data", headerData)
   .then((res) => console.log(res.data))
-  .catch((err) => console.error());
-*/
+  .catch((err) => console.log(err));
+axios
+  .post("https://6646320e51e227f23aae2ccd.mockapi.io/data/nazmi_data", skillsData)
+  .then((res) => console.log(res.data))
+  .catch((err) => console.log(err));
+axios
+  .post("https://6646320e51e227f23aae2ccd.mockapi.io/data/nazmi_data", projectsData)
+  .then((res) => console.log(res.data))
+  .catch((err) => console.log(err));
+axios
+  .post("https://6646320e51e227f23aae2ccd.mockapi.io/data/nazmi_data", footerData)
+  .then((res) => console.log(res.data))
+  .catch((err) => console.log(err)); */

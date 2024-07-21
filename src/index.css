@@ -5,14 +5,12 @@
 *::after {
   box-sizing: border-box;
 }
-
 /* Prevent font size inflation */
 html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
 }
-
 /* Remove default margin in favour of better control in authored CSS */
 body,
 h1,
@@ -26,13 +24,11 @@ dl,
 dd {
   margin-block-end: 0;
 }
-
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role="list"],
 ol[role="list"] {
   list-style: none;
 }
-
 /* Set shorter line heights on headings and interactive elements */
 h1,
 h2,
@@ -43,7 +39,6 @@ input,
 label {
   line-height: 1.1;
 }
-
 /* Balance text wrapping on headings */
 h1,
 h2,
@@ -51,20 +46,17 @@ h3,
 h4 {
   text-wrap: balance;
 }
-
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
   color: currentColor;
 }
-
 /* Make images easier to work with */
 img,
 picture {
   max-width: 100%;
   display: block;
 }
-
 /* Inherit fonts for inputs and buttons */
 input,
 button,
@@ -73,17 +65,14 @@ select {
   font-family: inherit;
   font-size: inherit;
 }
-
 /* Make sure textareas without a rows attribute are not tiny */
 textarea:not([rows]) {
   min-height: 10em;
 }
-
 /* Anything that has been anchored to should have extra scroll margin */
 :target {
   scroll-margin-block: 5ex;
 }
-
 html,
 body,
 div,
@@ -174,11 +163,9 @@ button {
   vertical-align: baseline;
   text-decoration: none;
 }
-
 #root {
   overflow: hidden;
 }
-
 :root {
   /*-------fontsize-----*/
   --fs-900: 3rem;
@@ -215,7 +202,6 @@ button {
   --clr-darkbluegreen: #495351;
   --color-card: #fff;
   --color-card-shadow: #777777;
-  --color-btn: #e92577;
   /*--------------------------------*/
 
   &:has(header[value="dark"]) {
@@ -227,7 +213,6 @@ button {
     --color-card: #525252;
     --color-card-shadow: rgba(82, 82, 82, 0.5);
     --clr-lightgray: #fff;
-    --color-btn: black;
 
     body {
       color: white;
@@ -245,112 +230,86 @@ button {
     scroll-behavior: auto !important;
   }
 }
-
 html {
   font-size: 16px;
 }
-
 /* Set core body defaults */
 body {
   min-height: 100vh;
   line-height: 1.5;
   font-size: 16px;
 }
-
 /*------------Utility Classes-------------- */
-
 .flex {
   display: flex;
 }
-
 .column {
   flex-direction: column;
 }
-
 .flex-container {
   flex-basis: 80%;
 }
-
 .flex-basis-40 {
   flex-basis: 40%;
 }
 .flex-profile {
   flex-basis: 40%;
 }
-
 .flex-basis-50 {
   flex-basis: 50%;
 }
-
 .flex-basis-60 {
   flex-basis: 60%;
 }
-
 .flex-basis-70 {
   flex-basis: 70%;
 }
-
 .flex-basis-80 {
   flex-basis: 80%;
 }
-
 .flex-basis-90 {
   flex-basis: 90%;
 }
-
 .flex-basis-100 {
   flex-basis: 100%;
 }
-
 .js-between {
   justify-content: space-between;
 }
-
 .js-around {
   justify-content: space-around;
 }
-
 .wrap {
   flex-wrap: nowrap;
 }
 .wrap-reverse {
   flex-wrap: nowrap;
 }
-
 .js-center {
   justify-content: center;
 }
-
 .alg-center {
   align-items: center;
 }
-
 .alg-end {
   align-items: flex-end;
 }
-
 .tx-center {
   text-align: center;
 }
-
 /*------gap----------------*/
-
 .gap-1 {
   gap: 1rem;
 }
-
 .gap-2 {
   gap: 1.5rem;
 }
-
 .gap-3 {
   gap: 2rem;
 }
-
 .gap-4 {
   gap: 3rem;
 }
-
 .padding-top-1 {
   padding-top: 1rem;
 }
@@ -360,13 +319,7 @@ body {
 .padding-top-3 {
   padding-top: 2rem;
 }
-.padding-top-4 {
-  padding-top: 5rem;
-}
 
-.padding-bottom-0 {
-  padding-bottom: 0.6rem;
-}
 .padding-bottom-1 {
   padding-bottom: 1rem;
 }
@@ -376,7 +329,6 @@ body {
 .padding-bottom-3 {
   padding-bottom: 2rem;
 }
-
 .padding-right-1 {
   padding-right: 3rem;
 }
@@ -386,11 +338,9 @@ body {
 .padding-right-3 {
   padding-right: 6rem;
 }
-
 .padding-right-4 {
   padding-right: 9rem;
 }
-
 .padding-left-1 {
   padding-left: 3rem;
 }
@@ -403,7 +353,6 @@ body {
 .padding-left-4 {
   padding-left: 9rem;
 }
-
 /*-------background-color---------*/
 .bg-white {
   background-color: var(--clr-white);
@@ -435,7 +384,6 @@ body {
 .bg-card {
   background-color: var(--color-card);
 }
-
 /*---font-size*/
 .fs-900 {
   font-size: var(--fs-900);
@@ -481,30 +429,23 @@ body {
 .ff-inter {
   font-family: var(--ff-inter);
 }
-
 .ff-play {
   font-family: var(--ff-play);
 }
-
 /*-------line-height---------*/
-
 .lh-1 {
   line-height: 1rem;
 }
-
 .lh-2 {
   line-height: 2rem;
 }
-
 .lh-3 {
   line-height: 3rem;
 }
 .lh-4 {
   line-height: 4rem;
 }
-
 /*-------text-color---------*/
-
 .tx-white {
   color: var(--clr-white);
 }
@@ -514,54 +455,37 @@ body {
 .tx-red {
   color: var(--clr-red);
 }
-
 .tx-gray {
   color: var(--clr-lightgray);
 }
-
 .uppercase {
   text-transform: uppercase;
 }
-
 .mode {
   align-self: flex-end;
 }
-
 .outline {
   border: blue solid 2px;
 }
-
 .position-relative {
   position: relative;
 }
-
 .position-absolute {
   position: absolute;
 }
-
 .position-fix {
   position: fixed;
 }
-
 .z-index-2 {
   z-index: 2;
 }
-/*-----------*/
-.point {
-  cursor: pointer;
-}
-.underline {
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
-  text-underline-offset: 0.2rem;
-}
+
 /*---Special Class---*/
 
 .profile-card {
   border-radius: 1rem;
   box-shadow: 5px 5px var(--color-card-shadow);
 }
-
 .profileimg {
   background-image: url("https://s3-alpha-sig.figma.com/img/76b0/6993/b04fd1fa29a883e2f4b8b8577a5c82eb?Expires=1716768000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=L4N~ozvxBUVaPenDRBq45XCDlY5QNRF5mggdF5gE~yYGR5I-zKgPrVymBJZjzVdB9HbvK~-o0-Z1-hphzK-HLxoX4O0~51SoxymaQUv-FJYDu1h0gBHYJEQwXpFIEGahuhkZG08uJrSCjMw6xDAGSafzbFK-~67LRUl80~LhFECPF9RGMCYNjff5R7ygEJkGfD4acMnY139gzL4HIk4sf0tq16P2NF065TTaw-5ipf8XzvP5x-E335rNEbMDSUYjyVIP46Lz6qHaXCJRqrQs6X8zkWYfAcHahB1JHe1XG6vZD4N4khlQgWyic0uckNHvkePHeA8sbzP47irvLmcH0A__");
   background-position: center;
@@ -571,17 +495,15 @@ body {
   border-radius: 2rem;
   box-shadow: -1rem -1rem #e92577;
 }
-
 .radio-btn {
   width: 55px;
   height: 25px;
   padding: 4px 4px 5px 6px;
-  background-color: var(--color-btn);
+  background-color: #e92577;
   border-radius: 15px;
   overflow: hidden;
   cursor: pointer;
 }
-
 .radio-inner {
   position: relative;
   width: 18px;
@@ -591,7 +513,6 @@ body {
   transition: all 0.6s;
   cursor: pointer;
 }
-
 .radio-inner::before {
   content: "";
   position: absolute;
@@ -599,22 +520,19 @@ body {
   left: -60%;
   width: 100%;
   height: 100%;
-  background-color: var(--color-btn);
+  background-color: #e92577;
   border-radius: 50%;
   transform: scale(0);
   transition: all 0.6s;
 }
-
 .active {
   transform: translateX(calc(50px - 26px));
 }
-
 .active::before {
   left: -4px;
   transform: scale(0.8);
   cursor: pointer;
 }
-
 li {
   list-style-type: none;
   border-radius: 1rem;
@@ -622,50 +540,45 @@ li {
 }
 
 picture {
-  position: absolute;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: -3rem;
+  bottom: 11.7rem;
 }
 
 picture img:nth-of-type(2) {
   position: absolute;
 }
-
 img:first-of-type {
   z-index: 1;
 }
-
 picture > img:last-of-type {
   max-width: 92%;
 }
-
 footer a:nth-of-type(1) {
   color: #1769ff;
 }
-
 footer a:nth-of-type(3) {
   color: #0077b5;
 }
-
 footer a:nth-of-type(4) {
   color: #af0c48;
 }
 
 .polo-gray {
-  width: 8rem;
-  height: 8rem;
+  width: 8.4vw;
+  height: 8.4vw;
   border: 1.3rem solid #d9d9d9;
   border-radius: 50%;
-  bottom: -4rem;
+  bottom: -4.2vw;
   right: 20%;
   z-index: 1;
 }
 
 .polo-pink {
-  width: 8rem;
-  height: 8rem;
+  width: 8.4vw;
+  height: 8.4vw;
   border: 1.3rem solid #ea2678;
   border-radius: 50%;
   right: -3vw;
@@ -674,16 +587,16 @@ footer a:nth-of-type(4) {
 
 .circle {
   background-color: #d9d9d9;
-  width: 7rem;
-  height: 7rem;
+  width: 7.7vw;
+  height: 7.7vw;
   border-radius: 50%;
-  top: -3.5rem;
+  top: -3.5vw;
   left: 20%;
 }
 
 .diglet-gray {
-  width: 6rem;
-  height: 2.8rem;
+  width: 6vw;
+  height: 2.8vw;
   background-color: #525252;
   border-radius: 0rem 2rem 2rem 0rem;
   bottom: 10%;
@@ -691,62 +604,42 @@ footer a:nth-of-type(4) {
 }
 
 .diglet-pink {
-  width: 7rem;
-  height: 3rem;
+  width: 7.7vw;
+  height: 3vw;
   background-color: #ea2678;
   border-radius: 2rem 0 0 2rem;
   top: 80%;
   right: 0;
 }
 
-.text-pink {
-  position: relative; /* Konumlandırma için gerekli */
+.stick-pink {
+  width: 10vw;
+  height: 2.2vw;
+  background-color: #ea2678;
+  border-radius: 0.4rem;
+  left: 0;
+  top: 25%;
   z-index: 1;
 }
 
-.text-pink::after {
-  content: ""; /* İçerik eklemek için gerekli */
-  position: absolute; /* Konumlandırma için gerekli */
-  top: 2rem; /* Metnin altına 2 piksellik boşluk bırakır */
-  left: -1rem; /* Sol kenardan başlar */
-  width: 9.1rem; /* Metnin tam genişliğinde olacak */
-  height: 2rem; /* Çizginin kalınlığı */
-  background-color: #ea2678; /* Çizginin rengi */
-  border-radius: 5px; /* Çizginin köşelerinin yumuşatılması */
-  z-index: -1;
-}
-.text-blue {
-  position: relative; /* Konumlandırma için gerekli */
+.stick-blue {
+  width: 6vw;
+  height: 1.5vw;
+  background-color: #82bbff;
+  border-radius: 0.4rem;
+  left: 0;
+  top: 8%;
   z-index: 1;
 }
 
-.text-blue::after {
-  content: ""; /* İçerik eklemek için gerekli */
-  position: absolute; /* Konumlandırma için gerekli */
-  top: 1rem; /* Metnin altına 2 piksellik boşluk bırakır */
-  left: -0.7rem; /* Sol kenardan başlar */
-  width: 5.5rem; /* Metnin tam genişliğinde olacak */
-  height: 1.3rem; /* Çizginin kalınlığı */
-  background-color: #82bbff; /* Çizginin rengi */
-  border-radius: 5px; /* Çizginin köşelerinin yumuşatılması */
-  z-index: -1;
-}
-
-.text-blue-big {
-  position: relative; /* Konumlandırma için gerekli */
+.bigstick-blue {
+  width: 23vw;
+  height: 1.5vw;
+  background-color: #82bbff;
+  border-radius: 0.4rem;
   z-index: 1;
-}
-
-.text-blue-big::after {
-  content: ""; /* İçerik eklemek için gerekli */
-  position: absolute; /* Konumlandırma için gerekli */
-  bottom: 0.2rem; /* Metnin altına 2 piksellik boşluk bırakır */
-  left: 7.8rem; /* Sol kenardan başlar */
-  width: 17rem; /* Metnin tam genişliğinde olacak */
-  height: 1.3rem; /* Çizginin kalınlığı */
-  background-color: #82bbff; /* Çizginin rengi */
-  border-radius: 5px; /* Çizginin köşelerinin yumuşatılması */
-  z-index: -1;
+  top: 33%;
+  left: 32%;
 }
 
 @media (max-width: 600px) {
@@ -754,7 +647,6 @@ footer a:nth-of-type(4) {
     flex-wrap: wrap-reverse;
   }
 }
-
 @media (min-width: 300px) {
   .flex-container {
     flex-basis: 96%;
@@ -766,7 +658,6 @@ footer a:nth-of-type(4) {
   .wrap {
     flex-wrap: wrap;
   }
-
   .flex-profile {
     flex-basis: 70%;
   }
@@ -828,9 +719,58 @@ footer a:nth-of-type(4) {
     font-size: 15px;
   }
 }
-
 @media (min-width: 1800px) {
   .flex-container {
     flex-basis: 60%;
   }
+}
+
+.text-pink {
+  position: relative; /* Konumlandırma için gerekli */
+  z-index: 1;
+}
+
+.text-pink::after {
+  content: ""; /* İçerik eklemek için gerekli */
+  position: absolute; /* Konumlandırma için gerekli */
+  top: 2rem; /* Metnin altına 2 piksellik boşluk bırakır */
+  left: -1rem; /* Sol kenardan başlar */
+  width: 9.1rem; /* Metnin tam genişliğinde olacak */
+  height: 2rem; /* Çizginin kalınlığı */
+  background-color: #ea2678; /* Çizginin rengi */
+  border-radius: 5px; /* Çizginin köşelerinin yumuşatılması */
+  z-index: -1;
+}
+.text-blue {
+  position: relative; /* Konumlandırma için gerekli */
+  z-index: 1;
+}
+
+.text-blue::after {
+  content: ""; /* İçerik eklemek için gerekli */
+  position: absolute; /* Konumlandırma için gerekli */
+  top: 1rem; /* Metnin altına 2 piksellik boşluk bırakır */
+  left: -0.7rem; /* Sol kenardan başlar */
+  width: 5.5rem; /* Metnin tam genişliğinde olacak */
+  height: 1.3rem; /* Çizginin kalınlığı */
+  background-color: #82bbff; /* Çizginin rengi */
+  border-radius: 5px; /* Çizginin köşelerinin yumuşatılması */
+  z-index: -1;
+}
+
+.text-blue-big {
+  position: relative; /* Konumlandırma için gerekli */
+  z-index: 1;
+}
+
+.text-blue-big::after {
+  content: ""; /* İçerik eklemek için gerekli */
+  position: absolute; /* Konumlandırma için gerekli */
+  bottom: 0.2rem; /* Metnin altına 2 piksellik boşluk bırakır */
+  left: 7.8rem; /* Sol kenardan başlar */
+  width: 17rem; /* Metnin tam genişliğinde olacak */
+  height: 1.3rem; /* Çizginin kalınlığı */
+  background-color: #82bbff; /* Çizginin rengi */
+  border-radius: 5px; /* Çizginin köşelerinin yumuşatılması */
+  z-index: -1;
 }

@@ -1,21 +1,22 @@
 import { useContext } from "react";
 import { Context } from "../context/context";
+import { skillsData } from "../data";
 
 const Skills = () => {
-  const { data } = useContext(Context);
+  const { lang } = useContext(Context);
+
   return (
     <section className="bg-white flex js-center padding-top-3 padding-bottom-3 position-relative">
       <div className="flex column alg-center flex-container gap-3 padding-top-3 padding-bottom-3">
         <div className="diglet-gray position-absolute"></div>
         <h2 className="flex-basis-40 fw-500 lh-4 fs-900">
-          {data[0]?.skillsData.title}
+          {skillsData[lang].title}
         </h2>
-        <div className="flex js-center gap-1 padding-bottom-3 wrap">
-          {data[0]?.skillsData.skills.map((item) => (
+        <div className="flex js-between gap-2 padding-bottom-3 wrap">
+          {skillsData.skills.map((item) => (
             <figure
               key={item.name}
-              className="flex column alg-center gap-1 fs-600 uppercase flex-basis-30"
-              style={{ minWidth: "50px" }}
+              className="flex column alg-center gap-1 fs-600 uppercase "
             >
               {" "}
               <div>
@@ -29,5 +30,4 @@ const Skills = () => {
     </section>
   );
 };
-
 export default Skills;

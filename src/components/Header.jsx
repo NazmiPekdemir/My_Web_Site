@@ -1,40 +1,20 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { headerData } from "../data";
 import useLocalStorage from "../hooks/useLocalStorage";
 import { useContext, useEffect } from "react";
 import { Context } from "../context/context";
 
-import { toastFunc } from "../hooks/toast";
-
 const Header = () => {
   const [darkMode, setDarkMode] = useLocalStorage("Theme", false);
-  const [lang, setLang] = useLocalStorage("language", "TR");
-  const { data, sendRequest, METHODS } = useContext(Context);
+  const { lang, toogle, npdata } = useContext(Context);
 
-  useEffect(() => {
-    sendRequest({ url: `${lang}`, method: METHODS.GET });
-  }, []);
-
-  useEffect(() => {
-    sendRequest({
-      url: `${lang}`,
-      method: METHODS.GET,
-      callbackSuccess: () => toastFunc("success", lang, darkMode),
-      callbackError: () => toastFunc("error", lang, darkMode),
-    });
-    console.log(data);
-  }, [lang]);
-
-  const toogle = (e) => {
-    const name = e.target.name;
-    if (name === "mode") {
-      setDarkMode(!darkMode);
-    } else if (name === "language") {
-      setLang(lang === "TR" ? "EN" : "TR");
-    } else {
-      setDarkMode(!darkMode);
-      e.stopPropagation();
-    }
+  const toggleTheme = () => {
+    setDarkMode(!darkMode);
+  };
+  const toggleWithDiv = (e) => {
+    toggleTheme();
+    e.stopPropagation();
   };
 
   return (
@@ -54,41 +34,36 @@ const Header = () => {
               id="mode"
               className="radio-btn"
               name="mode"
-              onClick={toogle}
+              onClick={toggleTheme}
             >
               <div
                 htmlFor="mode"
                 className={`radio-inner ${darkMode ? "active" : ""}`}
-                onClick={toogle}
+                onClick={toggleWithDiv}
               ></div>
             </button>
-            <label
-              htmlFor="mode"
-              className="fw-700 lh-1 tx-gray uppercase point"
-            >
-              {data[0]?.headerData?.selections?.mode[darkMode ? 1 : 0]}{" "}
+            <label htmlFor="mode" className="fw-700 lh-1 tx-gray uppercase">
+              {headerData[lang].selections.mode[darkMode ? 1 : 0]}{" "}
             </label>
             <span>|</span>
             <button
               data-cy="language-toggle"
-              className="tx-red bg-gray fw-700 lh-1 uppercase point"
+              className="tx-red bg-gray fw-700 lh-1 uppercase"
               name="language"
               onClick={toogle}
             >
-              {data[0]?.headerData?.selections?.language}
+              {headerData[lang].selections.language}
             </button>
           </div>
 
           <div className="flex space-between alg-center js-center gap-3 wrap-reverse padding-right-2 padding-left-2">
             <div
-              style={{ flexBasis: "95%" }}
+              style={{ flexBasis: "65%" }}
               className="flex column gap-3 position-relative"
             >
-              <div className="fs-700 fw-400">
-                {data[0]?.headerData?.title}👋
-              </div>
+              <div className="fs-700 fw-400">{headerData[lang].title}👋</div>
               <h1 className="text-pink fs-800 fw-500 lh-4 z-index-2">
-                {data[0]?.headerData?.content}
+                {headerData[lang].content}
               </h1>
               <div className="flex gap-2 padding-top-1">
                 <FontAwesomeIcon className="fa-3x" icon={faLinkedin} />
@@ -97,18 +72,15 @@ const Header = () => {
               </div>
               <div className="fs-500 fw-400 lh-2">
                 <p>
-                  {data[0]?.headerData?.text[0]}{" "}
-                  <span className="tx-red">{data[0]?.headerData?.text[1]}</span>{" "}
-                  {data[0]?.headerData?.text[2]}{" "}
-                  <span className="tx-red">{data[0]?.headerData?.text[3]}</span>{" "}
-                  {data[0]?.headerData?.text[4]}
+                  {headerData[lang].text[0]}{" "}
+                  <span className="tx-red">{headerData[lang].text[1]}</span>{" "}
+                  {headerData[lang].text[2]}{" "}
+                  <span className="tx-red">{headerData[lang].text[3]}</span>{" "}
+                  {headerData[lang].text[4]}
                 </p>
                 <p>
-                  {data[0]?.headerData?.text[5]} {"-> "}
-                  <a
-                    href="mailto:pratamaiosi@gmail.com"
-                    className="tx-red underline"
-                  >
+                  {headerData[lang].text[5]} -{" "}
+                  <a href="pratamaiosi@gmail.com" className="tx-red">
                     pratamaiosi@gmail.com
                   </a>
                 </p>
@@ -126,5 +98,4 @@ const Header = () => {
     </>
   );
 };
-
 export default Header;
