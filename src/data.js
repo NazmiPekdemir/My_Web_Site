@@ -63,11 +63,12 @@ export const skillsData = {
 export const profileData = {
   en: {
     information: {
-      birthday: { name: "Birth Date", value: "24.03.1996" },
-      city: { name: "City", value: "Ankara" },
+      birthday: { name: "Birth Date", value: "12.01.1996" },
+      city: { name: "City", value: "Bursa" },
       education: {
         name: "Education",
-        value: "Hacettepe Unv. Biology Licence, 2016",
+        value:
+          "Bursa Teknik Unv. Electrical - Electronics Engineer Licence, 2021",
       },
       preferred: { name: "Preferred Role", value: "Frontend,UI" },
     },
@@ -82,11 +83,12 @@ export const profileData = {
   },
   tr: {
     information: {
-      birthday: { name: "Doğum Tarihi", value: "24.03.1996" },
-      city: { name: "İkamet Şehri", value: "Ankara" },
+      birthday: { name: "Doğum Tarihi", value: "12.01.1996" },
+      city: { name: "İkamet Şehri", value: "Bursa" },
       education: {
         name: "Eğitim Durumu",
-        value: "Hacettepe Ünv. Biyoloji Lisans, 2016",
+        value:
+          "Bursa Teknik Ünv. Elektrik-Elektronik Mühendisliği Lisansı, 2021",
       },
       preferred: { name: "Tercih Ettiği Rol", value: "Frontend,UI" },
     },
@@ -103,18 +105,18 @@ export const profileData = {
 /*
 export const profileData = {
   birthday: {
-    en: { name: "Birth Date", value: "24.03.1996" },
-    tr: { name: "Doğum Tarihi", value: "24.03.1996" },
+    en: { name: "Birth Date", value: "12.01.1996" },
+    tr: { name: "Doğum Tarihi", value: "12.01.1996" },
   },
   city: {
-    en: { name: "City", value: "Ankara" },
-    tr: { name: "İkamet Şehri", value: "Ankara" },
+    en: { name: "City", value: "Bursa" },
+    tr: { name: "İkamet Şehri", value: "Bursa" },
   },
   education: {
-    en: { name: "Education", value: "Hacettepe Ünv. Biyoloji Lisans, 2016" },
+    en: { name: "Education", value: "Bursa Teknik Ünv. Elektrik-Elektronik Mühendisliği Lisansı, 2021" },
     tr: {
       name: "Eğitim Durumu",
-      value: "Hacettepe Ünv. Biyoloji Lisans, 2016",
+      value: "Bursa Teknik Ünv. Elektrik-Elektronik Mühendisliği Lisansı, 2021",
     },
   },
   preferred: {
@@ -179,7 +181,7 @@ export const projectsData = {
 export const headerData = {
   en: {
     title: "Hi!",
-    content: `I’m Almila. I’m a full-stack developer. I can craft solid and
+    content: `I’m Nazmi. I’m a full-stack developer. I can craft solid and
         scalable frontend products. Let’s meet!`,
     text: [
       "Currently",
@@ -193,7 +195,7 @@ export const headerData = {
   },
   tr: {
     title: "Merhaba!",
-    content: `Ben Almila. Ben tam kapsamlı bir geliştiriciyim. Sağlam işler yapabilirim ve
+    content: `Ben Nazmi. Ben tam kapsamlı bir geliştiriciyim. Sağlam işler yapabilirim ve
       ölçeklenebilir ön uç ürünleri. Tanışalim!`,
     text: [
       "Şu anda",
