@@ -1,4 +1,4 @@
-describe("Theme Toggle", () => {
+describe("Test-1 Theme Toggle", () => {
   it("toggles the theme", () => {
     // Arrange: Başlangıç durumunu ayarlayın
     cy.visit("http://localhost:5173/"); // Uygulamanızın doğru URL'sini kullanın
@@ -19,7 +19,7 @@ describe("Theme Toggle", () => {
     cy.get("header").should("have.attr", "value", "");
   });
 });
-describe("Language Toggle", () => {
+describe("Test-2 Language Toggle", () => {
   it("toggles the language", () => {
     // Arrange: Başlangıç durumunu ayarlayın
     cy.visit("http://localhost:5173/"); // Uygulamanızın doğru URL'sini kullanın

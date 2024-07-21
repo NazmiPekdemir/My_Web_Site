@@ -103,29 +103,6 @@ export const profileData = {
     titles: ["Profil", "Temel Bilgiler"],
   },
 };
-/*
-export const profileData = {
-  birthday: {
-    en: { name: "Birth Date", value: "24.03.1996" },
-    tr: { name: "Doğum Tarihi", value: "24.03.1996" },
-  },
-  city: {
-    en: { name: "City", value: "Ankara" },
-    tr: { name: "İkamet Şehri", value: "Ankara" },
-  },
-  education: {
-    en: { name: "Education", value: "Hacettepe Ünv. Biyoloji Lisans, 2016" },
-    tr: {
-      name: "Eğitim Durumu",
-      value: "Hacettepe Ünv. Biyoloji Lisans, 2016",
-    },
-  },
-  preferred: {
-    en: { name: "Preferred Role", value: "Frontend,UI" },
-    tr: { name: "Tercih Ettiği Rol", value: "Frontend,UI" },
-  },
-};
-*/
 export const projectsData = {
   en: {
     title: "Projects",
@@ -151,6 +128,7 @@ export const projectsData = {
         ],
       },
     ],
+    links: ["View on Github", "Go to app"],
   },
   tr: {
     title: "Projeler",
@@ -176,6 +154,7 @@ export const projectsData = {
         ],
       },
     ],
+    links: ["Github'ta görüntüle", "Uygulamaya git"],
   },
 };
 
@@ -218,28 +197,32 @@ export const footerData = {
   en: ["Let’s work together on", "your next product.", "Personal Blog"],
   tr: ["Bir sonraki projende", "birlikte çalışalım.", "Kişisel Blog"],
 };
-
-/* axios
-  .post("https://6646320e51e227f23aae2ccd.mockapi.io/data/nazmi_data", profileData)
-  .then((res) => console.log(res.data))
-  .catch((err) => console.log(err));
+/*
+const url = "https://6647084651e227f23ab0c91f.mockapi.io/api/TR";
 
 axios
-  .post("https://6646320e51e227f23aae2ccd.mockapi.io/data/nazmi_data", headerData)
+  .post(url, {
+    id: "1",
+    headerData: { ...headerData.tr },
+    projectsData: { ...projectsData.tr },
+    profileData: { ...profileData.tr },
+    skillsData: { ...skillsData.tr, skills: [...skillsData.skills] },
+    footerData: [...footerData.tr],
+  })
   .then((res) => console.log(res.data))
-  .catch((err) => console.log(err));
+  .catch((err) => console.error());
+
+const url2 = "https://6647084651e227f23ab0c91f.mockapi.io/api/EN";
 
 axios
-  .post("https://6646320e51e227f23aae2ccd.mockapi.io/data/nazmi_data", skillsData)
+  .post(url2, {
+    id: "1",
+    headerData: { ...headerData.en },
+    projectsData: { ...projectsData.en },
+    profileData: { ...profileData.en },
+    skillsData: { ...skillsData.en, skills: [...skillsData.skills] },
+    footerData: [...footerData.en],
+  })
   .then((res) => console.log(res.data))
-  .catch((err) => console.log(err));
-
-axios
-  .post("https://6646320e51e227f23aae2ccd.mockapi.io/data/nazmi_data", projectsData)
-  .then((res) => console.log(res.data))
-  .catch((err) => console.log(err));
-
-axios
-  .post("https://6646320e51e227f23aae2ccd.mockapi.io/data/nazmi_data", footerData)
-  .then((res) => console.log(res.data))
-  .catch((err) => console.log(err)); */
+  .catch((err) => console.error());
+*/
