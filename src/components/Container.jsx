@@ -13,5 +13,3 @@ const Container = () => {
 };
 
 export default Container;
-
-/* Nazmi */
